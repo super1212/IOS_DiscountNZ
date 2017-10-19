@@ -33,7 +33,7 @@ class ProductData: NSObject,NSCoding {
             self.category = json["category"]! as? String
             self.startDate = json["startDate"]! as? String
             self.endDate = json["endDate"]! as? String
-//            self.imgUrl = json["imgUrl"]! as? String
+            self.imgUrl = json["imgUrl"]! as? String
 
         }
     }
