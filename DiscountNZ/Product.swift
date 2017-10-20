@@ -19,6 +19,8 @@ class ProductData: NSObject,NSCoding {
     var addr:String?
     var longitude:String?
     var latitude:String?
+    var imgUrl:String?
+
     
     init(json: Dictionary<String,Any>){
         if(json != nil){
@@ -31,6 +33,7 @@ class ProductData: NSObject,NSCoding {
             self.category = json["category"]! as? String
             self.startDate = json["startDate"]! as? String
             self.endDate = json["endDate"]! as? String
+//            self.imgUrl = json["imgUrl"]! as? String
 
         }
     }

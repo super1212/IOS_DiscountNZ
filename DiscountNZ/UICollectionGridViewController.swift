@@ -32,7 +32,7 @@ class UICollectionGridViewController: UICollectionViewController {
         collectionView!.delegate = self
         collectionView!.dataSource = self
         collectionView!.isDirectionalLockEnabled = true
-        collectionView!.contentInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        collectionView!.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView!.bounces = false
     }
     
@@ -112,7 +112,7 @@ class UICollectionGridViewController: UICollectionViewController {
                                  didSelectItemAt indexPath: IndexPath) {
         //打印出点击单元格的［行,列］坐标
         print("点击单元格的[行,列]坐标: [\(indexPath.section),\(indexPath.row)]")
-        self.parentController?.showDetails(indexPath:indexPath)
+        self.parentController?.showDetails(indexPath: indexPath)
         //let viewController  = self.parentController?.storyboard?.instantiateViewController(withIdentifier: "HH") as! UIViewController
         //present(viewController, animated: true, completion: nil)
     }
