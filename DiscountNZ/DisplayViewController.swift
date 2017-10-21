@@ -32,11 +32,17 @@ class DisplayViewController: UIViewController {
         //addressCotent?.text = product?.addr
         addressContent?.text = "newlynn"
         //brandCotent?.text = product?.brand
-        //brandCotent?.text = "countdown"
+        brandContent?.text = "countdown"
         //priceContent?.text = product?.price
-        //priceContent?.text = "5.5"
+        priceContent?.text = "5.5"
     }
-
+    
+    /*
+    func get_image(_url_str:String._imageView:UIImageView)
+    {
+        let url:URL = URL(string:url_str)!
+    }
+*/
     /*
     // MARK: - Navigation
 
