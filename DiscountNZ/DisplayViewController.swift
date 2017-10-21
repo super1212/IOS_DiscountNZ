@@ -22,7 +22,7 @@ class DisplayViewController: UIViewController {
     @IBOutlet weak var discountImg: UIImageView!
     
     //let URL_IMAGE = URL(string: product.imgUrl)
-    let URL_IMAGE = URL(string: "http://www.kaleidosblog.com/tutorial/image.jpg")
+    var URL_IMAGE = URL(string: "http://www.kaleidosblog.com/tutorial/image.jpg")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +41,11 @@ class DisplayViewController: UIViewController {
         //addressContent?.text = "newlynn"
         brandContent?.text = product?.brand
         //brandContent?.text = "countdown"
-        //priceContent?.text = product?.price
-        priceContent?.text = "5.5"
+        priceContent?.text = product?.price
+        //priceContent?.text = "5.5"
         
-        //let imgurl = product.imgUrl
-        //let imgurl = "http://www.kaleidosblog.com/tutorial/image.jpg"
-        
-        //get_image(_url_str: imgurl, _imageView: discountImg)
+        let url = product?.imgUrl
+        URL_IMAGE = URL(string: url!)
         
         getImageByUrl()
         
