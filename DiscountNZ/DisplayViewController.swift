@@ -10,6 +10,15 @@ import UIKit
 
 class DisplayViewController: UIViewController {
     //var product : ProductData
+
+    @IBOutlet weak var address: UILabel!
+    
+    @IBOutlet weak var brand: UILabel!
+    
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var addressCotent: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
