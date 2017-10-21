@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="priceContent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC2-8B-DYr">
-                                <rect key="frame" x="157" y="482" width="164" height="21"/>
+                                <rect key="frame" x="157" y="482" width="164" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -89,11 +89,13 @@
                     </view>
                     <connections>
                         <outlet property="addressContent" destination="0Fc-1v-3W2" id="4nx-Ee-dh0"/>
+                        <outlet property="brandContent" destination="yL7-l6-DnT" id="7ph-t8-vPc"/>
+                        <outlet property="priceContent" destination="LC2-8B-DYr" id="4qP-6s-ljC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-fd-XP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="151.57421289355324"/>
+            <point key="canvasLocation" x="-34.399999999999999" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -148,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="164.16791604197903"/>
+            <point key="canvasLocation" x="-727" y="134"/>
         </scene>
     </scenes>
 </document>

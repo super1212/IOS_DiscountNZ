@@ -12,6 +12,10 @@ class DisplayViewController: UIViewController {
 
     @IBOutlet weak var addressContent: UILabel!
     
+    @IBOutlet weak var brandContent: UILabel!
+    
+    @IBOutlet weak var priceContent: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
