@@ -37,12 +37,29 @@ class DisplayViewController: UIViewController {
         priceContent?.text = "5.5"
     }
     
-    /*
-    func get_image(_url_str:String._imageView:UIImageView)
+    
+    func get_image(_url_str:String, _imageView:UIImageView)
     {
-        let url:URL = URL(string:url_str)!
+        let url:URL = URL(string:_url_str)!
+        let session = URLSession.shared
+        let task = session.dataTask(with: url,completionHandler:{
+        (data, response, error) in
+            if (data==nil)
+            {}
+            else
+            {
+                let image = UIImage(data: data!)
+                if(image != nil)
+                {
+                    DispatchQueue.main.async(execute:{
+                        _imageView.image = image
+                    })
+                    
+                }
+            }
+        })
     }
-*/
+
     /*
     // MARK: - Navigation
 
