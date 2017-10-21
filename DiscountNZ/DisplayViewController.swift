@@ -16,6 +16,11 @@ class DisplayViewController: UIViewController {
     
     @IBOutlet weak var priceContent: UILabel!
     
+    
+    @IBOutlet weak var discountImg: UIImageView!
+    
+    let URL_IMAGE = URL(string: "http://www.kaleidosblog.com/tutorial/image.jpg")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,9 +40,17 @@ class DisplayViewController: UIViewController {
         brandContent?.text = "countdown"
         //priceContent?.text = product?.price
         priceContent?.text = "5.5"
+        
+        //let imgurl = product.imgUrl
+        //let imgurl = "http://www.kaleidosblog.com/tutorial/image.jpg"
+        
+        //get_image(_url_str: imgurl, _imageView: discountImg)
+        
+        getImageByUrl()
+
     }
     
-    
+    /*
     func get_image(_url_str:String, _imageView:UIImageView)
     {
         let url:URL = URL(string:_url_str)!
@@ -58,8 +71,41 @@ class DisplayViewController: UIViewController {
                 }
             }
         })
+        task.resume()
     }
+ */
 
+    
+    func getImageByUrl()
+    {
+        let session = URLSession(configuration: .default)
+    
+        
+        let getImageFromUrl = session.dataTask(with: URL_IMAGE!){(data, response, error) in
+            
+            if let e = error{
+                print("Some error occurred: \(e)")
+            }else{
+                if(response as? HTTPURLResponse) != nil{
+                    if let imageData = data{
+                    
+                        let image = UIImage(data: imageData)
+                        
+                        self.discountImg.image = image
+                    }else{
+                        print("no image found")
+                    }
+                }else
+                {
+                    print("No response from server")
+                }
+            }
+            
+       }
+        
+        getImageFromUrl.resume()
+    }
+    
     /*
     // MARK: - Navigation
 

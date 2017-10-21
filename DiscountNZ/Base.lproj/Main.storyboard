@@ -94,12 +94,13 @@
                     <connections>
                         <outlet property="addressContent" destination="0Fc-1v-3W2" id="4nx-Ee-dh0"/>
                         <outlet property="brandContent" destination="yL7-l6-DnT" id="7ph-t8-vPc"/>
+                        <outlet property="discountImg" destination="k4R-Bz-8MT" id="jQm-4o-kPk"/>
                         <outlet property="priceContent" destination="LC2-8B-DYr" id="4qP-6s-ljC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-fd-XP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.399999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-444" y="146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -154,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="134"/>
+            <point key="canvasLocation" x="-1111" y="147"/>
         </scene>
     </scenes>
 </document>
