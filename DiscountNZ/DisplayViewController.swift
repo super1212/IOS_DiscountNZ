@@ -36,6 +36,11 @@ class DisplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onClickBack(_ sender: Any) {
+        self.dismiss(animated: false)
+
+    }
+    
     func DisplayItem() {
         addressContent?.text = product?.addr
         //addressContent?.text = "newlynn"
