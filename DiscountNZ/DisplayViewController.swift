@@ -10,9 +10,13 @@ import UIKit
 
 class DisplayViewController: UIViewController {
 
+    @IBOutlet weak var addressContent: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //addressCotent?.text = product?.addr
+        addressContent?.text = "newlynn"
         // Do any additional setup after loading the view.
     }
 
