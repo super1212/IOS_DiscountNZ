@@ -15,8 +15,7 @@ class DisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //addressCotent?.text = product?.addr
-        addressContent?.text = "newlynn"
+        DisplayItem()
         // Do any additional setup after loading the view.
     }
 
@@ -25,6 +24,14 @@ class DisplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func DisplayItem() {
+        //addressCotent?.text = product?.addr
+        addressContent?.text = "newlynn"
+        //brandCotent?.text = product?.brand
+        //brandCotent?.text = "countdown"
+        //priceContent?.text = product?.price
+        //priceContent?.text = "5.5"
+    }
 
     /*
     // MARK: - Navigation
