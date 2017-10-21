@@ -89,6 +89,14 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
             present(viewController, animated: true, completion: nil)
         }
     }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if(segue.identifier == "toBviewController"){
+//            var bVc:BViewController = segue.destinationViewController as BViewController
+//            bVc.tempString = textField.text
+//            bVc.delegate = self
+//        }
+//    }
     
     
     func getProductData(){

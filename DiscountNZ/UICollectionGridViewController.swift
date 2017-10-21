@@ -111,7 +111,6 @@ class UICollectionGridViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView,
                                  didSelectItemAt indexPath: IndexPath) {
         //打印出点击单元格的［行,列］坐标
-        print("点击单元格的[行,列]坐标: [\(indexPath.section),\(indexPath.row)]")
         self.parentController?.showDetails(indexPath: indexPath)
         //let viewController  = self.parentController?.storyboard?.instantiateViewController(withIdentifier: "HH") as! UIViewController
         //present(viewController, animated: true, completion: nil)
