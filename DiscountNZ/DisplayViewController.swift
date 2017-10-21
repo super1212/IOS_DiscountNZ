@@ -19,6 +19,7 @@ class DisplayViewController: UIViewController {
     
     @IBOutlet weak var discountImg: UIImageView!
     
+    //let URL_IMAGE = URL(string: product.imgUrl)
     let URL_IMAGE = URL(string: "http://www.kaleidosblog.com/tutorial/image.jpg")
     
     override func viewDidLoad() {
