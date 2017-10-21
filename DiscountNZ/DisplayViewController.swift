@@ -9,6 +9,8 @@
 import UIKit
 
 class DisplayViewController: UIViewController {
+    
+    var product : ProductData?
 
     @IBOutlet weak var addressContent: UILabel!
     
@@ -35,10 +37,10 @@ class DisplayViewController: UIViewController {
     }
     
     func DisplayItem() {
-        //addressCotent?.text = product?.addr
-        addressContent?.text = "newlynn"
-        //brandCotent?.text = product?.brand
-        brandContent?.text = "countdown"
+        addressContent?.text = product?.addr
+        //addressContent?.text = "newlynn"
+        brandContent?.text = product?.brand
+        //brandContent?.text = "countdown"
         //priceContent?.text = product?.price
         priceContent?.text = "5.5"
         
