@@ -47,7 +47,7 @@ class DisplayViewController: UIViewController {
         //get_image(_url_str: imgurl, _imageView: discountImg)
         
         getImageByUrl()
-
+        
     }
     
     /*
@@ -85,25 +85,34 @@ class DisplayViewController: UIViewController {
             
             if let e = error{
                 print("Some error occurred: \(e)")
-            }else{
-                if(response as? HTTPURLResponse) != nil{
+            }
+            else{
+                if(response as? HTTPURLResponse) != nil
+                {
                     if let imageData = data{
                     
                         let image = UIImage(data: imageData)
                         
                         self.discountImg.image = image
-                    }else{
+                    }
+                    else{
                         print("no image found")
                     }
-                }else
+                }
+                else
                 {
                     print("No response from server")
                 }
+                
+                print("222222")
             }
+            
+            print("33333")
             
        }
         
-        getImageFromUrl.resume()
+       getImageFromUrl.resume()
+        
     }
     
     /*
