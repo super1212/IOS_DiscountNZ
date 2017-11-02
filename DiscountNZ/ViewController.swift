@@ -84,8 +84,8 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         let index = indexPath.section
         if(index > 0){
             let myProduct = productList[index - 1]
-            let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "HH") as! UIViewController
-//            viewController.product = myProduct
+            let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "HH") as! DisplayViewController
+            viewController.product = myProduct
             present(viewController, animated: true, completion: nil)
         }
     }
