@@ -101,9 +101,9 @@ class DisplayViewController: UIViewController {
     
     //show detail of product
     public func showMap() {
-            //let myProduct = product
+            let myProduct = product
             let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "MAP") as! MapViewController
-            //viewController.product = myProduct
+            viewController.product = myProduct
             present(viewController, animated: true, completion: nil)
         
     }

@@ -20,16 +20,16 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let latitude = -27.4
-        let longtitude = 153.1
+        //let latitude = -27.4
+        //let longtitude = 153.1
         
         
-        //let latitude = product?.longitude
-        //let longtitude = product?.latitude
+        let latitude = Double((product?.longitude)!)
+        let longtitude = Double((product?.latitude)!)
         
         //var centerLocation = CLLocationCoordinate2DMake(latitude: CLLocationDegrees, longtitude : CLLocationDegrees)
         
-        var centerLocation = CLLocationCoordinate2DMake(latitude, longtitude)
+        var centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
         var mapSpan = MKCoordinateSpanMake(0.01, 0.01)
         
         var mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
