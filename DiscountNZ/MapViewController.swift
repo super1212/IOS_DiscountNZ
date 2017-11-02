@@ -13,6 +13,9 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
 
+    @IBAction func onClickBack(_ sender: Any) {
+        self.dismiss(animated: false)
+    }
     var product : ProductData?
 
     override func viewDidLoad() {
