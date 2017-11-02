@@ -41,6 +41,9 @@ class DisplayViewController: UIViewController {
 
     }
     
+    
+    
+    
     func DisplayItem() {
         addressContent?.text = product?.addr
         //addressContent?.text = "newlynn"
@@ -81,6 +84,31 @@ class DisplayViewController: UIViewController {
     }
  */
 
+    //show detail of product
+    /*public func showDetails(indexPath: IndexPath) {
+        let index = indexPath.section
+        if(index > 0){
+            let myProduct = productList[index - 1]
+            let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "HH") as! DisplayViewController
+            viewController.product = myProduct
+            present(viewController, animated: true, completion: nil)
+        }
+    }*/
+
+    @IBAction func onMapClilcked(_ sender: Any) {
+        showMap()
+    }
+    
+    //show detail of product
+    public func showMap() {
+            //let myProduct = product
+            let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "MAP") as! MapViewController
+            //viewController.product = myProduct
+            present(viewController, animated: true, completion: nil)
+        
+    }
+
+    
     
     func getImageByUrl()
     {
