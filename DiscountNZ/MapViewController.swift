@@ -23,6 +23,10 @@ class MapViewController: UIViewController {
         let latitude = -27.4
         let longtitude = 153.1
         
+        
+        //let latitude = product?.longitude
+        //let longtitude = product?.latitude
+        
         //var centerLocation = CLLocationCoordinate2DMake(latitude: CLLocationDegrees, longtitude : CLLocationDegrees)
         
         var centerLocation = CLLocationCoordinate2DMake(latitude, longtitude)
