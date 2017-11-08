@@ -12,20 +12,33 @@ import MapKit
 class MapViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
+    var scale = 2000
 
     @IBAction func onClickBack(_ sender: Any) {
         self.dismiss(animated: false)
     }
     
+    @IBAction func onChangeType(_ sender: Any) {
+        if map.mapType == MKMapType.standard{
+            map.mapType = MKMapType.satellite
+        }
+        else{
+            map.mapType = MKMapType.standard
+        }
+    }
     
     @IBAction func onZoomOut(_ sender: Any) {
         //let userLocation = map.userLocation
         //var currentRegion = map.
-    
+        
+        if scale < 20000{
+            scale = scale*2
+        }
+        
         let latitude = Double((product?.longitude)!)
         let longtitude = Double((product?.latitude)!)
         var centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
-        let region = MKCoordinateRegionMakeWithDistance(centerLocation,20000,20000)
+        let region = MKCoordinateRegionMakeWithDistance(centerLocation,CLLocationDistance(scale),CLLocationDistance(scale))
     
         self.map.setRegion(region, animated: true)
         
