@@ -16,13 +16,27 @@ class MapViewController: UIViewController {
     @IBAction func onClickBack(_ sender: Any) {
         self.dismiss(animated: false)
     }
+    
+    
+    @IBAction func onZoomOut(_ sender: Any) {
+        //let userLocation = map.userLocation
+        //var currentRegion = map.
+    
+        let latitude = Double((product?.longitude)!)
+        let longtitude = Double((product?.latitude)!)
+        var centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
+        let region = MKCoordinateRegionMakeWithDistance(centerLocation,20000,20000)
+    
+        self.map.setRegion(region, animated: true)
+        
+    }
+    
     var product : ProductData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let latitude = -27.4
-        //let longtitude = 153.1
         
+        map.showsUserLocation = true
         
         let latitude = Double((product?.longitude)!)
         let longtitude = Double((product?.latitude)!)
