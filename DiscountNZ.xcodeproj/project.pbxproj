@@ -22,6 +22,7 @@
 		18D6061B1F932FDB003B7FCE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6061A1F932FDB003B7FCE /* Color.swift */; };
 		87086E2F1F9B1ADC0040A6A4 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87086E2E1F9B1ADC0040A6A4 /* DisplayViewController.swift */; };
 		87A16AF81FA9CCC100CDE7E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A16AF71FA9CCC100CDE7E8 /* MapViewController.swift */; };
+		87A16AFB1FB3A8CA00CDE7E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		18D6061A1F932FDB003B7FCE /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		87086E2E1F9B1ADC0040A6A4 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		87A16AF71FA9CCC100CDE7E8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A16AFB1FB3A8CA00CDE7E8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 				18D605E81F9189B3003B7FCE /* DiscountNZTests */,
 				18D605F31F9189B3003B7FCE /* DiscountNZUITests */,
 				18D605D21F9189B3003B7FCE /* Products */,
+				87A16AF91FB3A8CA00CDE7E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +199,14 @@
 				18D6061A1F932FDB003B7FCE /* Color.swift */,
 			);
 			name = Others;
+			sourceTree = "<group>";
+		};
+		87A16AF91FB3A8CA00CDE7E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

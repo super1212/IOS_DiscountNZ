@@ -9,8 +9,23 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+import CoreLocation
+
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
+    let manager = CLLocationManager()
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        map.setRegion(region, animated: true)
+        
+        self.map.showsUserLocation = true
+    }
     @IBOutlet weak var map: MKMapView!
     var scale = 2000
 
@@ -42,6 +57,8 @@ class MapViewController: UIViewController {
     
         self.map.setRegion(region, animated: true)
         
+        
+        
     }
     
     var product : ProductData?
@@ -49,12 +66,16 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        map.showsUserLocation = true
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        
+        
         
         let latitude = Double((product?.longitude)!)
         let longtitude = Double((product?.latitude)!)
-        
-        //var centerLocation = CLLocationCoordinate2DMake(latitude: CLLocationDegrees, longtitude : CLLocationDegrees)
         
         var centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
         var mapSpan = MKCoordinateSpanMake(0.01, 0.01)
@@ -66,9 +87,12 @@ class MapViewController: UIViewController {
         var pikachuPin = MKPointAnnotation()
         let pikachuCoordinates = CLLocationCoordinate2DMake(latitude!, longtitude!)
         pikachuPin.coordinate = pikachuCoordinates
-        pikachuPin.title = "Pikachu"
+        //pikachuPin.title = "Pikachu"
+        pikachuPin.title = product?.brand
         
         map.addAnnotation(pikachuPin)
+        
+        self.map.showsUserLocation = true
         
         // Do any additional setup after loading the view.
     }
