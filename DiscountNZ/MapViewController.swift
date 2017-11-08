@@ -36,6 +36,13 @@ class MapViewController: UIViewController {
         
         self.map.setRegion(mapRegion, animated: true)
         
+        var pikachuPin = MKPointAnnotation()
+        let pikachuCoordinates = CLLocationCoordinate2DMake(latitude!, longtitude!)
+        pikachuPin.coordinate = pikachuCoordinates
+        pikachuPin.title = "Pikachu"
+        
+        map.addAnnotation(pikachuPin)
+        
         // Do any additional setup after loading the view.
     }
 
