@@ -23,6 +23,7 @@
 		87086E2F1F9B1ADC0040A6A4 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87086E2E1F9B1ADC0040A6A4 /* DisplayViewController.swift */; };
 		87A16AF81FA9CCC100CDE7E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A16AF71FA9CCC100CDE7E8 /* MapViewController.swift */; };
 		87A16AFB1FB3A8CA00CDE7E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */; };
+		87A16AFE1FB8117000CDE7E8 /* 158684.gif.png in Resources */ = {isa = PBXBuildFile; fileRef = 87A16AFD1FB8117000CDE7E8 /* 158684.gif.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		87086E2E1F9B1ADC0040A6A4 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		87A16AF71FA9CCC100CDE7E8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		87A16AFD1FB8117000CDE7E8 /* 158684.gif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 158684.gif.png; path = imgs/158684.gif.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		18D605D31F9189B3003B7FCE /* DiscountNZ */ = {
 			isa = PBXGroup;
 			children = (
+				87A16AFC1FB8114100CDE7E8 /* resource */,
 				18D606191F932FAD003B7FCE /* Others */,
 				18D6060C1F931EDF003B7FCE /* GridView */,
 				18D606051F918A57003B7FCE /* Manage */,
@@ -207,6 +210,14 @@
 				87A16AFA1FB3A8CA00CDE7E8 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87A16AFC1FB8114100CDE7E8 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				87A16AFD1FB8117000CDE7E8 /* 158684.gif.png */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D605DF1F9189B3003B7FCE /* LaunchScreen.storyboard in Resources */,
+				87A16AFE1FB8117000CDE7E8 /* 158684.gif.png in Resources */,
 				18D605DC1F9189B3003B7FCE /* Assets.xcassets in Resources */,
 				18D605DA1F9189B3003B7FCE /* Main.storyboard in Resources */,
 			);
