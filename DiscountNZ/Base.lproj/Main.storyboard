@@ -148,6 +148,7 @@
                         <outlet property="addressContent" destination="0Fc-1v-3W2" id="4nx-Ee-dh0"/>
                         <outlet property="brandContent" destination="yL7-l6-DnT" id="7ph-t8-vPc"/>
                         <outlet property="discountImg" destination="k4R-Bz-8MT" id="jQm-4o-kPk"/>
+                        <outlet property="nameContent" destination="q12-oi-k3M" id="b2Z-dc-C3K"/>
                         <outlet property="priceContent" destination="LC2-8B-DYr" id="4qP-6s-ljC"/>
                     </connections>
                 </viewController>

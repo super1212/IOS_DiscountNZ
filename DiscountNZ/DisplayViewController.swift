@@ -12,6 +12,8 @@ class DisplayViewController: UIViewController {
     
     var product : ProductData?
 
+    @IBOutlet weak var nameContent: UILabel!
+    
     @IBOutlet weak var addressContent: UILabel!
     
     @IBOutlet weak var brandContent: UILabel!
@@ -41,16 +43,12 @@ class DisplayViewController: UIViewController {
 
     }
     
-    
-    
-    
     func DisplayItem() {
+        nameContent?.text = product?.name
+        
         addressContent?.text = product?.addr
-        //addressContent?.text = "newlynn"
         brandContent?.text = product?.brand
-        //brandContent?.text = "countdown"
         priceContent?.text = product?.price
-        //priceContent?.text = "5.5"
         
         let url = product?.imgUrl
         URL_IMAGE = URL(string: url!)
@@ -59,42 +57,6 @@ class DisplayViewController: UIViewController {
         
     }
     
-    /*
-    func get_image(_url_str:String, _imageView:UIImageView)
-    {
-        let url:URL = URL(string:_url_str)!
-        let session = URLSession.shared
-        let task = session.dataTask(with: url,completionHandler:{
-        (data, response, error) in
-            if (data==nil)
-            {}
-            else
-            {
-                let image = UIImage(data: data!)
-                if(image != nil)
-                {
-                    DispatchQueue.main.async(execute:{
-                        _imageView.image = image
-                    })
-                    
-                }
-            }
-        })
-        task.resume()
-    }
- */
-
-    //show detail of product
-    /*public func showDetails(indexPath: IndexPath) {
-        let index = indexPath.section
-        if(index > 0){
-            let myProduct = productList[index - 1]
-            let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "HH") as! DisplayViewController
-            viewController.product = myProduct
-            present(viewController, animated: true, completion: nil)
-        }
-    }*/
-
     @IBAction func onMapClilcked(_ sender: Any) {
         showMap()
     }
