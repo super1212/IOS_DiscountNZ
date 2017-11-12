@@ -46,6 +46,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         //let userLocation = map.userLocation
         //var currentRegion = map.
         
+        /*
         if scale < 20000{
             scale = scale*2
         }
@@ -57,7 +58,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
         self.map.setRegion(region, animated: true)
         
-        
+        */
         
     }
     
