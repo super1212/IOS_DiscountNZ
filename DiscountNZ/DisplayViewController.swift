@@ -54,6 +54,7 @@ class DisplayViewController: UIViewController {
         
         let url = product?.imgUrl
         URL_IMAGE = URL(string: url!)
+        print(URL_IMAGE)
         
         getImageByUrl()
         
@@ -86,7 +87,6 @@ class DisplayViewController: UIViewController {
         
         let session = URLSession(configuration: .default)
     
-        
         let getImageFromUrl = session.dataTask(with: URL_IMAGE!){(data, response, error) in
             
             if let e = error{
@@ -112,10 +112,10 @@ class DisplayViewController: UIViewController {
                     print("No response from server")
                 }
                 
-                print("222222")
+                //print("222222")
             }
             
-            print("33333")
+            //print("33333")
             
        }
         
