@@ -10,6 +10,8 @@ import UIKit
 
 class DisplayViewController: UIViewController {
     
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     var product : ProductData?
 
     @IBOutlet weak var nameContent: UILabel!
@@ -74,6 +76,14 @@ class DisplayViewController: UIViewController {
     
     func getImageByUrl()
     {
+        activityIndicator.center = self.discountImg.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        
+        self.discountImg.addSubview(activityIndicator)
+        
+        self.activityIndicator.startAnimating()
+        
         let session = URLSession(configuration: .default)
     
         
@@ -85,6 +95,8 @@ class DisplayViewController: UIViewController {
             else{
                 if(response as? HTTPURLResponse) != nil
                 {
+                    self.activityIndicator.stopAnimating()
+                    
                     if let imageData = data{
                     
                         let image = UIImage(data: imageData)
