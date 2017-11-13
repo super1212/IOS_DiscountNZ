@@ -25,7 +25,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-Cc-AgG" userLabel="imgBG">
                                 <rect key="frame" x="0.0" y="43" width="320" height="210.5"/>
-                                <color key="backgroundColor" red="1" green="0.86777299266323826" blue="0.47812570646819874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.9261805072" green="0.99034569299999997" blue="0.75840573850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Kpb-Cc-AgG" secondAttribute="height" multiplier="32:21" id="fKq-Xf-4L4"/>
                                 </constraints>
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-fd-XP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1896" y="283"/>
+            <point key="canvasLocation" x="-1663" y="208"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="r2p-tk-u9q">
@@ -220,8 +220,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baG-BK-nX5">
-                                <rect key="frame" x="184" y="14" width="85" height="30"/>
-                                <state key="normal" title="change type"/>
+                                <rect key="frame" x="239" y="14" width="30" height="30"/>
                                 <connections>
                                     <action selector="onChangeType:" destination="3C2-lu-okj" eventType="touchUpInside" id="gGK-Oi-lvA"/>
                                 </connections>
@@ -248,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPK-eq-DPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="126"/>
+            <point key="canvasLocation" x="-1395" y="309"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

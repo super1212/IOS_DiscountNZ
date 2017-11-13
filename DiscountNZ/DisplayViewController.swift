@@ -54,7 +54,7 @@ class DisplayViewController: UIViewController {
         
         let url = product?.imgUrl
         URL_IMAGE = URL(string: url!)
-        print(URL_IMAGE)
+        //print(URL_IMAGE)
         
         getImageByUrl()
         

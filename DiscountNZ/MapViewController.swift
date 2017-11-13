@@ -34,12 +34,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func onChangeType(_ sender: Any) {
+        /*
         if map.mapType == MKMapType.standard{
             map.mapType = MKMapType.satellite
         }
         else{
             map.mapType = MKMapType.standard
         }
+        */
     }
     
     @IBAction func onZoomOut(_ sender: Any) {
