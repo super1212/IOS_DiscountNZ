@@ -46,6 +46,7 @@ class DisplayViewController: UIViewController {
 
     }
     
+    //show detail of product
     func DisplayItem() {
         nameContent?.text = product?.name
         
@@ -63,7 +64,7 @@ class DisplayViewController: UIViewController {
         showMap()
     }
     
-    //show detail of product
+    //pass product location to map view
     public func showMap() {
             let myProduct = product
             let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "MAP") as! MapViewController

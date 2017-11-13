@@ -85,6 +85,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         self.map.setRegion(mapRegion, animated: true)
         
+        
+        //add annotiation
         let pikachuPin = MKPointAnnotation()
         let pikachuCoordinates = CLLocationCoordinate2DMake(latitude!, longtitude!)
         pikachuPin.coordinate = pikachuCoordinates
@@ -93,7 +95,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         map.addAnnotation(pikachuPin)
         
         self.map.showsUserLocation = true
-        
         
     }
 
