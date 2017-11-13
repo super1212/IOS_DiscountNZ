@@ -53,7 +53,9 @@
                                 <rect key="frame" x="14" y="19" width="40" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="back"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onClickBack:" destination="Jft-qq-Rvc" eventType="touchUpInside" id="2Gp-qn-4ql"/>
                                 </connections>
@@ -178,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-fd-XP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1663" y="208"/>
+            <point key="canvasLocation" x="-1307" y="259"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="r2p-tk-u9q">
@@ -214,7 +216,9 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-Ev-bAb">
                                 <rect key="frame" x="11" y="14" width="34" height="30"/>
-                                <state key="normal" title="back"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onClickBack:" destination="3C2-lu-okj" eventType="touchUpInside" id="eyu-Oq-H5M"/>
                                 </connections>
