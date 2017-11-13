@@ -34,6 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func onChangeType(_ sender: Any) {
+        //for future use
         /*
         if map.mapType == MKMapType.standard{
             map.mapType = MKMapType.satellite
@@ -45,9 +46,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func onZoomOut(_ sender: Any) {
-        //let userLocation = map.userLocation
-        //var currentRegion = map.
         
+        //for future use
         /*
         if scale < 20000{
             scale = scale*2
@@ -69,35 +69,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        
-        
-        
         let latitude = Double((product?.longitude)!)
         let longtitude = Double((product?.latitude)!)
         
-        var centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
-        var mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let centerLocation = CLLocationCoordinate2DMake(latitude!, longtitude!)
+        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
         
-        var mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
+        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
         
         self.map.setRegion(mapRegion, animated: true)
         
-        var pikachuPin = MKPointAnnotation()
+        let pikachuPin = MKPointAnnotation()
         let pikachuCoordinates = CLLocationCoordinate2DMake(latitude!, longtitude!)
         pikachuPin.coordinate = pikachuCoordinates
-        //pikachuPin.title = "Pikachu"
         pikachuPin.title = product?.brand
         
         map.addAnnotation(pikachuPin)
         
         self.map.showsUserLocation = true
         
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

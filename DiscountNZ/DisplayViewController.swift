@@ -25,14 +25,15 @@ class DisplayViewController: UIViewController {
     
     @IBOutlet weak var discountImg: UIImageView!
     
-    //let URL_IMAGE = URL(string: product.imgUrl)
-    var URL_IMAGE = URL(string: "http://www.kaleidosblog.com/tutorial/image.jpg")
+    //initialize URL_IMAGE
+    var URL_IMAGE = URL(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DisplayItem()
         // Do any additional setup after loading the view.
+        DisplayItem()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,8 +55,6 @@ class DisplayViewController: UIViewController {
         
         let url = product?.imgUrl
         URL_IMAGE = URL(string: url!)
-        //print(URL_IMAGE)
-        
         getImageByUrl()
         
     }
@@ -114,10 +113,8 @@ class DisplayViewController: UIViewController {
                     print("No response from server")
                 }
                 
-                //print("222222")
             }
             
-            //print("33333")
             
        }
         
