@@ -95,7 +95,7 @@ class UICollectionGridViewController: UICollectionViewController {
                 NSFontAttributeName:UIFont.boldSystemFont(ofSize: 15)
                 ])
             cell.label.attributedText = text
-            cell.label.backgroundColor = UIColor.transparentLightYellow
+            cell.label.backgroundColor = UIColor.cyan
         //set row data
         } else {
             cell.label.font = UIFont.systemFont(ofSize: 15)

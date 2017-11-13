@@ -25,7 +25,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-Cc-AgG" userLabel="imgBG">
                                 <rect key="frame" x="0.0" y="43" width="320" height="210.5"/>
-                                <color key="backgroundColor" red="0.9261805072" green="0.99034569299999997" blue="0.75840573850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94983682439999995" green="1" blue="0.97041057799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Kpb-Cc-AgG" secondAttribute="height" multiplier="32:21" id="fKq-Xf-4L4"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-0N-qnh" userLabel="Bar">
                                 <rect key="frame" x="0.0" y="18" width="320" height="25"/>
-                                <color key="backgroundColor" red="1" green="0.96162327945085924" blue="0.79513206556156746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="DLe-Ri-hVm"/>
                                 </constraints>
@@ -53,7 +53,9 @@
                                 <rect key="frame" x="14" y="19" width="40" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="back"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onClickBack:" destination="Jft-qq-Rvc" eventType="touchUpInside" id="2Gp-qn-4ql"/>
                                 </connections>
@@ -135,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.9261805071608129" green="0.99034569300518138" blue="0.75840573850680615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94983682439999995" green="1" blue="0.97041057799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1CH-dT-ZRs" firstAttribute="top" secondItem="Kpb-Cc-AgG" secondAttribute="bottom" constant="53" id="0PM-C1-XCh"/>
                             <constraint firstItem="gmf-2T-kTc" firstAttribute="leading" secondItem="gLh-LF-VS1" secondAttribute="leadingMargin" constant="1" id="3wm-Ct-wpi"/>
@@ -178,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAu-fd-XP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1663" y="208"/>
+            <point key="canvasLocation" x="-1307" y="259"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="r2p-tk-u9q">
@@ -201,7 +203,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMP-g9-piM" userLabel="Bar">
                                 <rect key="frame" x="0.0" y="17" width="320" height="25"/>
-                                <color key="backgroundColor" red="1" green="0.96162327950000004" blue="0.79513206560000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="P7A-7Z-fE4"/>
                                 </constraints>
@@ -214,7 +216,9 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-Ev-bAb">
                                 <rect key="frame" x="11" y="14" width="34" height="30"/>
-                                <state key="normal" title="back"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onClickBack:" destination="3C2-lu-okj" eventType="touchUpInside" id="eyu-Oq-H5M"/>
                                 </connections>
@@ -226,7 +230,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9261805072" green="0.99034569299999997" blue="0.75840573850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94983682439999995" green="1" blue="0.97041057799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ni0-Ev-bAb" firstAttribute="top" secondItem="eEb-yf-cDK" secondAttribute="bottom" constant="-6" id="AI7-Bm-rh1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="47H-FH-ZcL" secondAttribute="trailing" constant="-8" id="Hnu-QH-11h"/>
@@ -247,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPK-eq-DPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1395" y="309"/>
+            <point key="canvasLocation" x="-1166" y="195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
