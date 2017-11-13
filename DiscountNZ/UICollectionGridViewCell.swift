@@ -11,18 +11,18 @@ import UIKit
 
 class UICollectionGridViewCell: UICollectionViewCell {
     
-    //内容标签
+    //text label
     var label:UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        //单元格边框
+        //border of a cell
         self.layer.borderWidth = 0
         self.backgroundColor = UIColor.white
         self.clipsToBounds = true
         
-        //添加内容标签
+        //add a text
         self.label = UILabel(frame: .zero)
         self.label.textAlignment = .center
         self.addSubview(self.label)

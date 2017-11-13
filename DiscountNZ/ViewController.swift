@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+    //current shows products
     var productList : [ProductData] = []
+    //all of the products from Json
     var allProductList : [ProductData] = []
+    //all category
     var categoryList : [String] = ["All Category"]
-    var brandList : [String] = ["All Brand"]
+    //all seller
+    var brandList : [String] = ["All Seller"]
+    //all of the date range
     var dateList = ["All Date", "Today", "Tomorrow", "This Week", "Next Week"]
     var gridViewController: UICollectionGridViewController!
 
@@ -24,6 +29,7 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var brandTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
 
+    //when the view load run this action
     override func viewDidLoad() {
         super.viewDidLoad()
         gridViewController = UICollectionGridViewController()
@@ -49,6 +55,7 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
+    //reset the text field, used to let the width suitful different devices
     func resetTextField(){
         let textFwidth = Double(self.view.frame.width/3)
         let textFheight = 20.00
@@ -66,7 +73,8 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         self.dateTextField.layer.borderWidth = CGFloat(boderWidth)
 
     }
-
+    
+    //show the Grid data from productList
     func showGridData(){
         gridViewController = UICollectionGridViewController()
         gridViewController.setParentController(parent: self)
@@ -89,20 +97,11 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
             present(viewController, animated: true, completion: nil)
         }
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if(segue.identifier == "toBviewController"){
-//            var bVc:BViewController = segue.destinationViewController as BViewController
-//            bVc.tempString = textField.text
-//            bVc.delegate = self
-//        }
-//    }
+
     
-    
+    //read data from online JSON
     func getProductData(){
-        //product list, save all of the product
-//        var productList : [ProductData] = []
-        //product data url
+      
         let url: NSURL = NSURL(string: "https://gist.githubusercontent.com/super1212/d0a3131282534ebe60b581b8a7f7be1f/raw/products.json")!
         //creata request object
         let request: NSURLRequest = NSURLRequest(url: url as URL)

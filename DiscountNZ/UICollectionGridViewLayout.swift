@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-//多列表格组件布局类
+
 class UICollectionGridViewLayout: UICollectionViewLayout {
-    //记录每个单元格的布局属性
+    //save the attributes of every item
     private var itemAttributes: [[UICollectionViewLayoutAttributes]] = []
     private var itemsSize: [NSValue] = []
     private var contentSize: CGSize = CGSize.zero
-    //表格组件视图控制器
+    //controller of view
     var viewController: UICollectionGridViewController!
     
-    //准备所有view的layoutAttribute信息
+    //prepare all of layoutAttributes in view
     override func prepare() {
         if collectionView!.numberOfSections == 0 {
             return
@@ -48,7 +48,7 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
                 
                 let indexPath = IndexPath(item: index, section: section)
                 let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-                //除第一列，其它列位置都左移一个像素，防止左右单元格间显示两条边框线
+            
                 if index == 0{
                     attributes.frame = CGRect(x:xOffset, y:yOffset, width:itemSize.width,
                                               height:itemSize.height).integral
@@ -81,7 +81,7 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
         contentSize = CGSize(width:contentWidth, height:contentHeight)
     }
     
-    //需要更新layout时调用
+    //update layout
     override func invalidateLayout() {
         itemAttributes = []
         itemsSize = []
@@ -89,20 +89,20 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
         super.invalidateLayout()
     }
     
-    // 返回内容区域总大小，不是可见区域
+    // get content size
     override var collectionViewContentSize: CGSize {
         get {
             return contentSize
         }
     }
     
-    // 这个方法返回每个单元格的位置和大小
+    // get the cells index information
     override func layoutAttributesForItem(at indexPath: IndexPath)
         -> UICollectionViewLayoutAttributes? {
             return itemAttributes[indexPath.section][indexPath.row]
     }
     
-    // 返回所有单元格位置属性
+    // get all of cell's attributes
     override func layoutAttributesForElements(in rect: CGRect)
         -> [UICollectionViewLayoutAttributes]? {
             var attributes: [UICollectionViewLayoutAttributes] = []
@@ -115,8 +115,7 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
             return attributes
     }
     
-    //当边界发生改变时，是否应该刷新布局。
-    //本例在宽度变化时，将重新计算需要的布局信息。
+    //reinit when the width change
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         let oldBounds = self.collectionView?.bounds
         if oldBounds!.width != newBounds.width {
@@ -126,7 +125,7 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
         }
     }
     
-    //计算所有单元格的尺寸（每一列各一个单元格）
+    //calculate the size of all cells
     func calculateItemsSize() {
         var remainingWidth = collectionView!.frame.width -
             collectionView!.contentInset.left - collectionView!.contentInset.right
@@ -137,24 +136,22 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
                                                          remainingWidth: remainingWidth)
             remainingWidth -= newItemSize.width
             let newItemSizeValue = NSValue(cgSize: newItemSize)
-            //由于遍历列的时候是从尾部开始遍历了，因此将结果插入数组的时候都是放人第一个位置
             itemsSize.insert(newItemSizeValue, at: 0)
             index -= 1
         }
     }
     
-    //计算某一列的单元格尺寸
+    //caculate size of a row
     func sizeForItemWithColumnIndex(columnIndex: Int, remainingWidth: CGFloat) -> CGSize {
         let columnString = viewController.cols[columnIndex]
-        //根据列头标题文件，估算各列的宽度
+        //get the width of a row from header
         let size = NSString(string: columnString).size(attributes: [
             NSFontAttributeName:UIFont.systemFont(ofSize: 15),
             NSUnderlineStyleAttributeName:NSUnderlineStyle.styleSingle.rawValue
             ])
         
-        //修改成所有列都平均分配（但宽度不能小于80）
+        //give every cell a average width
         let width = max(remainingWidth/CGFloat(columnIndex+1), 80)
-        //计算好的宽度还要取整，避免偏移
         return CGSize(width: ceil(width), height:size.height + 10)
     }
 }

@@ -39,16 +39,8 @@ class ProductData: NSObject,NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-//        self.name = aDecoder.decodeObject(forKey: "name") as! NSString as String
-//        self.price = aDecoder.decodeObject(forKey: "price") as! NSString as String
-
     }
     func encode(with aCoder: NSCoder) {
-//        aCoder.encode(self.price, forKey: "price")
 
     }
-    
-//    var headImgUrlStr:String?
-//    var email:String?
-//    var address:String?
 }
