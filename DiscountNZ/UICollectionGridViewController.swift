@@ -10,19 +10,19 @@ import Foundation
 
 import UIKit
 
-//多列表格组件（通过CollectionView实现）
+//Grid table component
 class UICollectionGridViewController: UICollectionViewController {
-    //表头数据
+    //header
     var cols: [String]! = []
-    //行数据
+    //row data
     var rows: [[Any]]! = []
-    //单元格内容居左时的左侧内边距
+    //padding in left
     private var cellPaddingLeft:CGFloat = -1
     
     private var parentController : ViewController? = nil
     
+    //init the table
     init() {
-        //初始化表格布局
         let layout = UICollectionGridViewLayout()
         super.init(collectionViewLayout: layout)
         layout.viewController = self
@@ -44,12 +44,12 @@ class UICollectionGridViewController: UICollectionViewController {
         self.parentController = parent as! ViewController
     }
     
-    //设置列头数据
+    //set header data
     func setColumns(columns: [String]) {
         cols = columns
     }
     
-    //添加行数据
+    //add a row
     func addRow(row: [Any]) {
         rows.append(row)
         collectionView!.collectionViewLayout.invalidateLayout()
@@ -69,33 +69,34 @@ class UICollectionGridViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //返回表格总行数
+    //get count of record
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         if cols.isEmpty {
             return 0
         }
-        //总行数是：记录数＋1个表头
+        //include header
         return rows.count + 1
     }
     
-    //返回表格的列数
+    //count of cols
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         return cols.count
     }
     
-    //单元格内容创建
+    //set value of a cell
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
                                                       for: indexPath) as! UICollectionGridViewCell
-        //设置列头单元格，内容单元格的数据
+        //set header cell
         if indexPath.section == 0 {
             let text = NSAttributedString(string: cols[indexPath.row], attributes: [
                 NSFontAttributeName:UIFont.boldSystemFont(ofSize: 15)
                 ])
             cell.label.attributedText = text
             cell.label.backgroundColor = UIColor.cyan
+        //set row data
         } else {
             cell.label.font = UIFont.systemFont(ofSize: 15)
             cell.label.text = "\(rows[indexPath.section-1][indexPath.row])"
