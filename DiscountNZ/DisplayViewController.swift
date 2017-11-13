@@ -95,13 +95,15 @@ class DisplayViewController: UIViewController {
             else{
                 if(response as? HTTPURLResponse) != nil
                 {
-                    self.activityIndicator.stopAnimating()
                     
                     if let imageData = data{
-                    
                         let image = UIImage(data: imageData)
-                        
-                        self.discountImg.image = image
+                        DispatchQueue.main.async(execute: {
+                            self.activityIndicator.stopAnimating()
+
+                            self.discountImg.image = image
+                        })
+
                     }
                     else{
                         print("no image found")
